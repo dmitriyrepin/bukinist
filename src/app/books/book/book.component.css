@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(20%, max-content) auto;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-col-1 {
+  justify-self: stretch;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 4px;
+  background: rgb(218, 218, 218);
+  border: 1px rgb(200, 200, 200);
+  border-bottom-style: solid;
+  font-weight: bold;
+}
+
+.grid-col-2 {
+  justify-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding-left: 4px;
+  background: rgb(255, 255, 255);
+  border: 1px rgb(218, 218, 218);
+  border-bottom-style: solid;
+}
+
+.book-form {
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 5px;
+}
+
+.auth-list {
+  display: inline;
+  background: greenyellow;
+}
+
+mat-chip {
+  max-width: 200px;
+}

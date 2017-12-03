@@ -1,0 +1,30 @@
+<form class="book-form">
+  <div class="grid">
+    <div class="grid-col-1">Title:</div>
+    <div class="grid-col-2">{{theBook.title}}</div>
+
+    <div class="grid-col-1">Authors:</div>
+    <div class="grid-col-2">
+      <span *ngFor="let author of theBook.authors; let isLast = last">{{author.name}}
+        <I>{{author.surname}}</I>
+        <span *ngIf="!isLast">,&nbsp;</span>
+      </span>
+    </div>
+
+    <div class="grid-col-1" *ngIf="theBook.edition">Edition:</div>
+    <div class="grid-col-2" *ngIf="theBook.edition">{{theBook.edition}}</div>
+
+    <div class="grid-col-1" *ngIf="theBook.pages">Pages:</div>
+    <div class="grid-col-2" *ngIf="theBook.pages">{{theBook.pages}}</div>
+
+    <div class="grid-col-1" *ngIf="theBook.publisher">Publisher:</div>
+    <div class="grid-col-2" *ngIf="theBook.publisher">{{theBook.publisher}}</div>
+
+    <div class="grid-col-1" *ngIf="theBook.date">Publication date:</div>
+    <div class="grid-col-2" *ngIf="theBook.date">{{theBook.date | date}}</div>
+
+    <div class="grid-col-1" *ngIf="theBook.isbn10">ISBN 10:</div>
+    <div class="grid-col-2" *ngIf="theBook.isbn10">{{theBook.isbn10}}</div>
+
+  </div>
+</form>
