@@ -2,7 +2,7 @@
 
 <form class="book-form" *ngFor="let ibook of bookList" (click)="selectBook(ibook)">
   <div class="grid">
-    <div class="grid-col-1">Title:</div>
-    <div class="grid-col-2">{{ibook.title}}</div>
+    <span class="grid-col-1">Title: </span>
+    <span class="grid-col-2">{{ibook.title}}</span>
   </div>
 </form>

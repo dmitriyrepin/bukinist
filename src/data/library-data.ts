@@ -1,4 +1,4 @@
-export class BookListData {
+export class LibraryData {
   static get books() {
     // tslint:disable:quotemark
     return {

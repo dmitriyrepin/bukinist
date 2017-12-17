@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { Author, Book } from '../shared/book.model';
 import { Library } from './library.model';
 
-import { BookListData } from './book-list-data';
+import { LibraryData } from '../../../data/library-data';
 
 @Injectable()
 export class LibraryService {
@@ -14,7 +13,7 @@ export class LibraryService {
 
   getLibrary(): Library {
     if (!this._library) {
-      this._library = new Library(BookListData.books);
+      this._library = new Library(LibraryData.books);
     }
     return this._library;
   }
